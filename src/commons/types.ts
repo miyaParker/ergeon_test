@@ -9,7 +9,7 @@ export type WeekDaysProps = {
 export type DateItemProps = {
   minName: string;
   active: string;
-  customDay: string;
+  selected: string;
   day: dayjs.Dayjs;
   handleClick: (event: React.MouseEvent, date: dayjs.Dayjs) => void;
 }
