@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +7,9 @@
 
 body {
     background-color: #F4F4F6;
+    font-family: 'SansSerif', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 .calendar {
@@ -50,7 +54,8 @@ body {
     text-align: center;
     width: 55px;
 }
-.day:hover:not(.active):not(.active_custom){
+
+.day:hover:not(.active):not(.active_custom) {
     background-color: #EEF0FB;
     color: #3D52D5;
     border-radius: 15px;
@@ -62,13 +67,10 @@ body {
     color: #FFFFFF;
     border-radius: 15px;
 }
+
 .active_custom {
     color: #3D52D5;
     font-weight: 600;
-}
-
-.highlighted {
-
 }
 
 .nav {
