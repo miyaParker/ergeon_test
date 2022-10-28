@@ -1,22 +1,17 @@
-import dayjs from "dayjs";
 import React from "react";
+import { DateItemProps } from "../commons/types";
+import { dayFormat } from "../commons/constants";
 
-const DateItem = ({
-                      minName,
-                      day,
-                      active,
-                      customDay,
-                      handleClick,
-                  }: { minName: string, day: dayjs.Dayjs, active: string, customDay: string, handleClick: (event: React.MouseEvent, date: dayjs.Dayjs) => void, }) => {
+const DateItem = ({ minName, day, active, customDay, handleClick }: DateItemProps) => {
 
-    return (
-        <div>
-            <h4 className="min_name">{minName}</h4>
-            <p className={`day ${active} ${customDay}`}
-               onClick={(e) => handleClick(e, day)}
-            >{day.format("D")}</p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h4 className="min_name">{minName}</h4>
+      <p className={`day ${active} ${customDay}`}
+         onClick={(e) => handleClick(e, day)}
+      >{day.format(dayFormat)}</p>
+    </div>
+  );
+};
 
-export default DateItem
+export default DateItem;
