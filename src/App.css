@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #313E49;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #F4F4F6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calendar {
+    width: 600px;
+    margin: 80px auto;
+    padding: 0 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.month {
+    padding-top: 50px;
+    padding-left: 10px;
+    font-size: 35px;
+    font-weight: normal;
+    vertical-align: top;
 }
 
-.App-link {
-  color: #61dafb;
+.weekdays {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weekdays h4.min_name {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.weekdays p {
+    cursor: pointer;
+}
+
+.day {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    width: 55px;
+}
+.day:hover:not(.active):not(.active_custom){
+    background-color: #EEF0FB;
+    color: #3D52D5;
+    border-radius: 15px;
+    transition: background-color 0.4s;
+}
+
+.active, custom_day {
+    background-color: #3D52D5;
+    color: #FFFFFF;
+    border-radius: 15px;
+}
+.active_custom {
+    color: #3D52D5;
+    font-weight: 600;
+}
+
+.highlighted {
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 10px;
+}
+
+.nav span {
+    width: 20px;
+}
+
+.nav span > img {
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.prev {
+    margin-right: 15px;
+    cursor: pointer;
 }
